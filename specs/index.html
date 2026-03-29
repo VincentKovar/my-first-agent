@@ -1,1 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vincent - Freelance Marketing Consultant. Strategic marketing operations and consulting for growing businesses.">
+  <meta name="theme-color" content="#1a1a1a">
+  <title>Vincent - Marketing Consultant</title>
+  
+  <style>
+    /* ===== CSS Reset & Base Styles ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #1a1a1a;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ===== Main Content Container ===== */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      width: 100%;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    /* ===== Animations ===== */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== Typography ===== */
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      animation: slideInUp 0.8s ease-out 0.1s both;
+    }
+
+    /* Accent color on "Marketing Operator" */
+    h1 .accent {
+      color: #3b82f6;
+    }
+
+    /* ===== Bio Section ===== */
+    .bio {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #e5e5e5;
+      animation: slideInUp 0.8s ease-out 0.2s both;
+    }
+
+    .bio p {
+      margin-bottom: 16px;
+    }
+
+    .bio p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ===== Call-to-Action Button ===== */
+    .cta-button {
+      background-color: #3b82f6;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      align-self: flex-start;
+      text-decoration: none;
+      display: inline-block;
+      letter-spacing: 0.3px;
+      animation: slideInUp 0.8s ease-out 0.3s both;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+
+    .cta-button:hover {
+      background-color: #2563eb;
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .cta-button:active {
+      transform: scale(0.95);
+      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+    }
+
+    .cta-button:focus {
+      outline: 2px solid #ffffff;
+      outline-offset: 2px;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      padding: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: auto;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+      animation: slideInUp 0.8s ease-out 0.4s both;
+    }
+
+    .contact-email {
+      font-size: 16px;
+      color: #e5e5e5;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      display: inline-block;
+    }
+
+    .contact-email:hover {
+      color: #3b82f6;
+      text-decoration: underline;
+    }
+
+    .contact-email:focus {
+      outline: 2px solid #3b82f6;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    .divider {
+      color: rgba(255, 255, 255, 0.2);
+      margin: 0 12px;
+    }
+
+    /* ===== Mobile Responsive Design ===== */
+    @media (max-width: 768px) {
+      main {
+        padding: 20px;
+      }
+
+      .container {
+        gap: 24px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .bio {
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .cta-button {
+        font-size: 16px;
+        padding: 14px 28px;
+        width: 100%;
+        text-align: center;
+        align-self: center;
+      }
+
+      footer {
+        padding: 24px;
+      }
+
+      .contact-email {
+        display: block;
+        margin-top: 8px;
+      }
+
+      .divider {
+        display: none;
+      }
+    }
+
+    /* ===== Tablet Adjustments ===== */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      h1 {
+        font-size: 40px;
+      }
+
+      main {
+        padding: 32px;
+      }
+    }
+
+    /* ===== Accessibility ===== */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
+    @media (prefers-color-scheme: light) {
+      body {
+        background-color: #ffffff;
+        color: #1a1a1a;
+      }
+
+      h1 .accent {
+        color: #0052a3;
+      }
+
+      .bio {
+        color: #333333;
+      }
+
+      .cta-button {
+        background-color: #0066cc;
+        box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+      }
+
+      .cta-button:hover {
+        background-color: #0052a3;
+        box-shadow: 0 6px 20px rgba(0, 102, 204, 0.3);
+      }
+
+      footer {
+        border-top-color: rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.02);
+      }
+
+      .contact-email {
+        color: #333333;
+      }
+
+      .contact-email:hover {
+        color: #0066cc;
+      }
+
+      .divider {
+        color: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    /* ===== Print Styles ===== */
+    @media print {
+      body {
+        background-color: #ffffff;
+        color: #000000;
+      }
+
+      .cta-button {
+        background-color: #0066cc;
+      }
+
+      .container {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Main Navigation ===== -->
+  <nav aria-label="Main Navigation" style="display: none;"></nav>
+
+  <!-- ===== Main Content ===== -->
+  <main role="main">
+    <div class="container">
+      <!-- ===== Headline ===== -->
+      <h1>
+        Hi, I'm Vincent<span class="accent"> — Marketing Operator</span>
+      </h1>
+
+      <!-- ===== Bio Section ===== -->
+      <section class="bio" aria-labelledby="about-section">
+        <h2 id="about-section" style="display: none;">About Vincent</h2>
+        <p>
+          I help ambitious businesses build and optimize their marketing operations from the ground up. With 8+ years of experience in marketing strategy, demand generation, and team leadership, I've worked with startups through scale-ups to design systems that drive sustainable growth.
+        </p>
+        <p>
+          Whether you need to restructure your marketing stack, implement better processes, or develop a data-driven growth strategy, I bring a practical, results-oriented approach to every engagement. Let's build something remarkable together.
+        </p>
+      </section>
+
+      <!-- ===== Call-to-Action Button ===== -->
+      <a 
+        href="mailto:vincent@example.com?subject=Free%20Consultation%20Request" 
+        class="cta-button"
+        aria-label="Book a free consultation with Vincent"
+      >
+        Book a Free Consultation
+      </a>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="footer-content">
+      <p>
+        <span class="contact-email">
+          <a href="mailto:vincent@example.com" aria-label="Send email to vincent@example.com">
+            vincent@example.com
+          </a>
+        </span>
+        <span class="divider">|</span>
+        <span class="contact-email">
+          <a href="https://linkedin.com/in/vincent" aria-label="Visit Vincent's LinkedIn profile">
+            LinkedIn
+          </a>
+        </span>
+      </p>
+      <p style="margin-top: 12px; font-size: 14px; color: #999999;">
+        © 2024 Vincent Marketing. Available for consulting engagements.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
