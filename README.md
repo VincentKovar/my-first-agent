@@ -193,7 +193,7 @@ my-first-agent/ ├── specs/ # 📋 Specifications (read-only for agent) ├
 
 
 
-🌐 **[View Live Site]** - [URL added after deployment]
+🌐 **[View Live Site]** - https://vincentkovar.github.io/my-first-agent/
 
 
 
@@ -205,7 +205,7 @@ my-first-agent/ ├── specs/ # 📋 Specifications (read-only for agent) ├
 
 **Creators**: Bradley Ross, Nicholas Ruest, The Agentics Foundation  
 
-**Completed**: 
+**Completed**: April, 2026
 
 
 
